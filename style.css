@@ -136,11 +136,18 @@ body {
   color: #EBEBEB;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 372px) {
+  .botao {
+    width: 61px;
+    height: 61px;
+  }
+}
+
+@media (max-width: 320px) {
   #calculator {
     margin: 0;
     padding: 32px 10px;
-    width: 250px;
+    width: 280px;
   }
 
   .botao {

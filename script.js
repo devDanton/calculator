@@ -17,6 +17,7 @@ for (var i = 0; i < buttons.length; i++) {
         resultH1.value = eval(expression.value)
       } else if (this.value === 'C') {
         expression.value = ''
+        resultH1.value = ''
       } else {
         expression.value += this.value
       }
