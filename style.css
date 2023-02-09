@@ -12,14 +12,16 @@ body {
 body {
   background-color: #807ECE;
   color: #EBEBEB;
+
 }
 
 #container {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 #calculator {
@@ -31,6 +33,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 26px;
+  margin: 10px;
 }
 
 #calc {
@@ -38,35 +41,51 @@ body {
   flex-direction: column;
   gap: 8px;
   padding: 0 18px;
-
 }
 
-#calc p {
+#expression {
+  background: none;
+  border: none;
+  font-size: 20px;
   text-align: end;
   color: #6B6B6B;
-
+  background: none;
 }
 
 #calc div {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
+.ph-equals {
+  width: 100%;
+}
+
+#resultado {
+  width: 100%;
+  color: #EBEBEB;
+  font-size: 36px;
+  background: none;
+  border-style: none;
+  text-align: end;
+}
+
 #teclado {
-  width: 292px;
+  max-width: 292px;
   height: 368px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap-reverse;
+  flex-flow: column column column column wrap;
+  justify-content: center;
+  align-items: center;
 
-}
-
-#teclado button {
-  font-size: 24px;
 }
 
 .botao {
+  font-size: 24px;
   width: 64px;
   height: 64px;
   border-radius: 9999px;
@@ -115,4 +134,17 @@ body {
 
 .btn17:hover {
   color: #EBEBEB;
+}
+
+@media (max-width: 400px) {
+  #calculator {
+    margin: 0;
+    padding: 32px 10px;
+    width: 250px;
+  }
+
+  .botao {
+    width: 48px;
+    height: 48px;
+  }
 }
