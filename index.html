@@ -1,52 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="shortcut icon"
-      href="src/assets/MathOperations.svg"
-      type="image/x-icon"
-    />
-    <title>Calculator</title>
-  </head>
-  <body>
-    <div id="container">
-      <div id="calculator">
-        <div id="calc">
-          <input type="text" id="expression" disabled />
-          <div>
-            <i class="ph-equals"></i>
-            <input type="text" id="resultado" disabled />
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" onclick="insert('')" href="src/assets/MathOperations.svg" type="image/x-icon"
+    onclick="insert('')" />
+  <title>Calculator</title>
+</head>
+
+<body>
+  <div id="container">
+    <div id="calculator">
+      <div id="calc">
+        <input type="text" id="expression" onclick="insert('')" disabled />
+        <div>
+          <i class="ph-equals"></i>
+          <p id="resultado"></p>
         </div>
-        <form id="teclado">
-          <input type="button" value="+/-" class="botao btn1" />
-          <input type="button" value="0" class="botao btn2" />
-          <input type="button" value="," class="botao btn3" />
-          <input type="button" value="=" class="botao btn4" />
-          <input type="button" value="1" class="botao btn5" />
-          <input type="button" value="2" class="botao btn6" />
-          <input type="button" value="3" class="botao btn7" />
-          <input type="button" value="+" class="botao btn8" />
-          <input type="button" value="4" class="botao btn9" />
-          <input type="button" value="5" class="botao btn10" />
-          <input type="button" value="6" class="botao btn11" />
-          <input type="button" value="-" class="botao btn12" />
-          <input type="button" value="7" class="botao btn13" />
-          <input type="button" value="8" class="botao btn14" />
-          <input type="button" value="9" class="botao btn15" />
-          <input type="button" value="*" class="botao btn16" />
-          <input type="button" value="CE" class="botao btn17" />
-          <input type="button" value="C" class="botao btn18" />
-          <input type="button" value="%" class="botao btn19" />
-          <input type="button" value="/" class="botao btn20" />
-        </form>
       </div>
+      <form id="teclado">
+        <button type="button" onclick="insert('')" class="botao btn1">+/-</button>
+        <button type="button" onclick="insert('0')" class="botao btn2">0</button>
+        <button type="button" onclick="insert('.')" class="botao btn3">,</button>
+        <button type="button" onclick="calc()" class="botao btn4">=</button>
+        <button type="button" onclick="insert('1')" class="botao btn5">1</button>
+        <button type="button" onclick="insert('2')" class="botao btn6">2</button>
+        <button type="button" onclick="insert('3')" class="botao btn7">3</button>
+        <button type="button" onclick="insert('+')" class="botao btn8">+</button>
+        <button type="button" onclick="insert('4')" class="botao btn9">4</button>
+        <button type="button" onclick="insert('5')" class="botao btn10">5</button>
+        <button type="button" onclick="insert('6')" class="botao btn11">6</button>
+        <button type="button" onclick="insert('-')" class="botao btn12">-</button>
+        <button type="button" onclick="insert('7')" class="botao btn13">7</button>
+        <button type="button" onclick="insert('8')" class="botao btn14">8</button>
+        <button type="button" onclick="insert('9')" class="botao btn15">9</button>
+        <button type="button" onclick="insert('*')" class="botao btn16">X</button>
+        <button type="button" onclick="back()" class="botao btn17">&lt;</button>
+        <button type="button" onclick="clean()" class="botao btn18">C</button>
+        <button type="button" onclick="insert('%')" class="botao btn19">%</button>
+        <button type="button" onclick="insert('/')" class="botao btn20">/</button>
+      </form>
     </div>
-  </body>
-  <script src="https://unpkg.com/phosphor-icons"></script>
-  <script src="script.js"></script>
+  </div>
+</body>
+<script src="https://unpkg.com/phosphor-icons"></script>
+<script src="script.js"></script>
+
 </html>

@@ -1,27 +1,30 @@
 let vh = window.innerHeight * 0.01
-
 document.documentElement.style.setProperty('--vh', `${vh}px`)
 
 window.addEventListener('resize', () => {
   let vh = window.innerHeight * 0.01
   document.documentElement.style.setProperty('--vh', `${vh}px`)
 })
-var expression = document.getElementById('expression')
-var buttons = document.getElementsByTagName('input')
-var resultH1 = document.getElementById('resultado')
 
-for (var i = 0; i < buttons.length; i++) {
-  if (buttons[i].type === 'button') {
-    buttons[i].addEventListener('click', function () {
-      if (this.value === '=') {
-        resultH1.value = eval(expression.value)
-      } else if (this.value === 'C') {
-        expression.value = ''
-        resultH1.value = ''
-      } else {
-        expression.value += this.value
-      }
-      console.log(this.value)
-    })
-  }
+function insert(num) {
+  var numero = document.getElementById("resultado").innerHTML
+  document.getElementById("resultado").innerHTML = numero + num
+}
+function clean() {
+  document.getElementById("resultado").innerHTML = ""
+}
+
+function percent() {
+  var numero = document.getElementById("resultado").innerHTML
+  document.getElementById("resultado").innerHTML = numero * num / 100
+}
+
+function back() {
+  var resultado = document.getElementById("resultado").innerHTML
+  document.getElementById("resultado").innerHTML = resultado.substring(0, resultado.length - 1)
+}
+
+function calc() {
+  var resultado = document.getElementById("resultado").innerHTML
+  resultado ? document.getElementById("resultado").innerHTML = eval(resultado) : resultado
 }

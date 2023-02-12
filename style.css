@@ -65,6 +65,7 @@ body {
 
 #resultado {
   width: 100%;
+  height: 42px;
   color: #EBEBEB;
   font-size: 36px;
   background: none;
