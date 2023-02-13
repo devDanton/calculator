@@ -59,8 +59,14 @@ body {
   justify-content: space-between;
 }
 
-.ph-equals {
-  width: 100%;
+i.ph-equals {
+  font-size: 20px;
+}
+
+i.ph-backspace {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #resultado {
